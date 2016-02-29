@@ -97,6 +97,7 @@ angle_X_gravityMean
 angle_Y_gravityMean
 angle_Z_gravityMean
 
+
 ## Original description of the variables from the Human Activity Recognition Using Smartphones Dataset
 
 Feature Selection 
@@ -128,6 +129,8 @@ fBodyAccMag
 fBodyAccJerkMag
 fBodyGyroMag
 fBodyGyroJerkMag
+
+
 
 The set of variables that were estimated from these signals are: 
 
