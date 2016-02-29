@@ -59,8 +59,8 @@ setwd("train")
 subject <- read_table("subject_train.txt", col_names = "subject")
 sensor_results <- read_table("X_train.txt", col_names = measurements)
 activity <- read_table("Y_train.txt", col_names = "activity")
-rm(list = c("subject", "activity", "sensor_results"))
 train_data <- bind_cols(subject, activity, sensor_results)
+rm(list = c("subject", "activity", "sensor_results"))
 
 setwd("..")
 
