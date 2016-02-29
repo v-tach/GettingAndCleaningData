@@ -57,9 +57,9 @@
 	subject <- read_table("subject_train.txt", col_names = "subject")
 	sensor_results <- read_table("X_train.txt", col_names = measurements)
 	activity <- read_table("Y_train.txt", col_names = "activity")
-	rm(list = c("subject", "activity", "sensor_results"))
-	train_data <- bind_cols(subject, activity, sensor_results)
 	
+	train_data <- bind_cols(subject, activity, sensor_results)
+	rm(list = c("subject", "activity", "sensor_results"))
 	setwd("..")
 
 ## Combine the two sets of data
@@ -72,7 +72,7 @@
 				levels = activityLabels$level, 
 				labels = activityLabels$label)
 
-## Pick out the variables from the dataset that include means or standard deviations. In this analysis I have decided to include any variable that contains "Mean" "mean" or "std" in the name
+## Pick out the variables from the dataset that include means or standard deviations. In this analysisgit I have decided to include any variable that contains "Mean" "mean" or "std" in the name
 
 	mean_std_data <- combined_data  %>%
 				select(subject, activity, matches("[Mm]ean|std"))
